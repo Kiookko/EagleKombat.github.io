@@ -1,72 +1,189 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #0ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #0ff;
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid #0ff;
-    border-radius: 10px;
+  max-width: 690px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+  border: 2px solid #0ff;
+}
+
+.wrapper {
+  border-radius: 5px;
+  border: 1px solid #0ff;
+}
+
+.wrapper .text-input {
+  display: flex;
+  border-bottom: 1px solid #0ff;
+}
+
+.text-input .to-text {
+  border-radius: 0px;
+  border-left: 1px solid #0ff;
+}
+
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #0ff;
+}
+
+.text-input textarea::placeholder {
+  color: #b7b6b6;
+}
+
+.controls, li, .icons, .icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+}
+
+.controls .row .icons {
+  width: 38%;
+}
+
+.controls .row .icons i {
+  width: 50px;
+  color: #0ff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #0ff;
+}
+
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #0ff;
+}
+
+.controls .row select {
+  color: #0ff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.7);
+  padding-left: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.text-input textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #0ff;
+  border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #0ff;
+  border-radius: 8px;
+  border-right: 2px solid #24243e;
+}
+
+.controls .exchange {
+  color: #0ff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.controls i:active {
+  transform: scale(0.9);
+}
+
+.container button {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #0f0c29;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #0ff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #0f0c29;
+  color: #0ff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 660px) {
+  .container {
     padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 0 15px #0ff;
-}
-
-h1 {
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #0ff;
-}
-
-.translator {
-    display: flex;
+  }
+  .wrapper .text-input {
     flex-direction: column;
-    gap: 10px;
-}
-
-textarea, select, button {
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #0ff;
-    color: #0ff;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+  }
+  .text-input .to-text {
+    border-left: 0px;
+    border-top: 1px solid #0ff;
+  }
+  .text-input textarea {
+    height: 200px;
+  }
+  .controls .row .icons {
+    display: none;
+  }
+  .container button {
+    padding: 13px;
     font-size: 16px;
-    outline: none;
-    box-shadow: 0 0 10px #0ff;
+  }
+  .controls .row select {
+    font-size: 16px;
+  }
+  .controls .exchange {
+    font-size: 14px;
+  }
 }
-
-textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-button {
-    background-color: #0f0c29;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background-color: #0ff;
-    color: #0f0c29;
-    transform: scale(1.05);
-}
-
-.exchange {
-    align-self: center;
-    background-color: #302b63;
-}
-
-.exchange:hover {
-    background-color: #0ff;
-    color: #302b63;
-}
-
