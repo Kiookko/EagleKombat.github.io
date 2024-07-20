@@ -1,57 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новостной сайт</title>
+    <title>Custom Translator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="banner">
-            <h1>Новостной сайт</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#tab1">Вкладка 1</a></li>
-                    <li><a href="#tab2">Вкладка 2</a></li>
-                    <li><a href="#tab3">Вкладка 3</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>Translator</h1>
+        <div class="translator">
+            <textarea id="inputText" placeholder="Enter text to translate..."></textarea>
+            <select id="languageSelect">
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ru">Russian</option>
+                <!-- Add more languages as needed -->
+            </select>
+            <button onclick="translateText()">Translate</button>
+            <textarea id="outputText" readonly placeholder="Translated text..."></textarea>
         </div>
-    </header>
-
-    <main>
-        <section id="tab1" class="tab-content">
-            <h2>Вкладка 1</h2>
-            <article>
-                <h3>Блогер Эдвард Бил арестован на 13 суток за ношение похожей на полицейскую формы Об этом сообщает "Рамблер"</h3>
-                <p>Мещанский суд Москвы назначил 13 суток административного ареста за мелкое хулиганство блогеру Эдуарду Билю...</p>
-                <button onclick="showMore()">Подробнее</button>
-            </article>
-            <article>
-                <h3>Новость 2</h3>
-                <p>Описание новости 2.</p>
-                <button onclick="showMore()">Подробнее</button>
-            </article>
-        </section>
-        <section id="tab2" class="tab-content">
-            <h2>Вкладка 2</h2>
-            <article>
-                <h3></h3>Кто такие фурри?
-                <p>Описание новости 3.</p>
-                <button onclick="showMore()">Подробнее</button>
-            </article>
-        </section>
-        <section id="tab3" class="tab-content">
-            <h2>Вкладка 3</h2>
-            <article>
-                <h3>Новость 4</h3>
-                <p>Описание новости 4.</p>
-                <button onclick="showMore()">Подробнее</button>
-            </article>
-        </section>
-    </main>
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+
