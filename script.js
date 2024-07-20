@@ -1,17 +1,21 @@
-// script.js
-document.addEventListener('DOMContentLoaded', (event) => {
-    const clicksbutton = document.getElementById('clicksbutton');
-    const clickCount = document.getElementById('clickCount');
-    const resetButton = document.getElementById('resetButton');
-    let count = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.main-nav a');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    clicksbutton.addEventListener('click', () => {
-        count++;
-        clickCount.textContent = count;
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(tab.getAttribute('href'));
+
+            tabContents.forEach(tc => tc.classList.remove('active'));
+            target.classList.add('active');
+        });
     });
 
-    resetButton.addEventListener('click', () => {
-        count = 0;
-        clickCount.textContent = count;
-    });
+    // Установим активной первую вкладку по умолчанию
+    tabContents[0].classList.add('active');
 });
+
+function showMore() {
+    alert('Показать больше информации о новости.');
+}
