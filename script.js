@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const resetButton = document.getElementById('resetButton');
     let count = 0;
 
-    eagle.addEventListener('click', () => {
+    clicksbutton.addEventListener('click', () => {
         count++;
         clickCount.textContent = count;
     });
