@@ -1,42 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.getElementById('gameCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+function translateText() {
+    const inputText = document.getElementById('inputText').value;
+    const language = document.getElementById('languageSelect').value;
+    const outputText = document.getElementById('outputText');
 
-    // Загрузка ресурсов
-    const playerImage = new Image();
-    playerImage.src = 'player.png';
-
-    // Игровой цикл
-    function gameLoop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        // Рендеринг игрока
-        ctx.drawImage(playerImage, canvas.width / 2 - 50, canvas.height / 2 - 50, 100, 100);
-
-        requestAnimationFrame(gameLoop);
-    }
-
-    playerImage.onload = () => {
-        gameLoop();
+    // Simulated translation for demo purposes
+    const translations = {
+        es: 'Texto traducido al español.',
+        fr: 'Texte traduit en français.',
+        de: 'In deutschen übersetzter Text.',
+        ru: 'Переведенный текст на русский.'
     };
 
-    // Обработка ввода
-    window.addEventListener('keydown', (e) => {
-        switch (e.key) {
-            case 'ArrowUp':
-                // Действие при нажатии вверх
-                break;
-            case 'ArrowDown':
-                // Действие при нажатии вниз
-                break;
-            case 'ArrowLeft':
-                // Действие при нажатии влево
-                break;
-            case 'ArrowRight':
-                // Действие при нажатии вправо
-                break;
-        }
-    });
-});
+    outputText.value = translations[language] || 'Translation not available.';
+}
+
