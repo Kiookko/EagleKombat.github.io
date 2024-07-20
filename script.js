@@ -1,21 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.main-nav a');
-    const tabContents = document.querySelectorAll('.tab-content');
+function translateText() {
+    const inputText = document.getElementById('inputText').value;
+    const language = document.getElementById('languageSelect').value;
+    const outputText = document.getElementById('outputText');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(tab.getAttribute('href'));
+    // Simulated translation for demo purposes
+    const translations = {
+        es: 'Texto traducido al español.',
+        fr: 'Texte traduit en français.',
+        de: 'In deutschen übersetzter Text.',
+        ru: 'Переведенный текст на русский.'
+    };
 
-            tabContents.forEach(tc => tc.classList.remove('active'));
-            target.classList.add('active');
-        });
-    });
-
-    // Установим активной первую вкладку по умолчанию
-    tabContents[0].classList.add('active');
-});
-
-function showMore() {
-    alert('Показать больше информации о новости.');
+    outputText.value = translations[language] || 'Translation not available.';
 }
