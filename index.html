@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Language Translator | Redwiat - Ocoxe</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk Translator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+         <!-- Standard favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/Redwiat/redwiat.github.io/main/favicon-redwiat.png" type="image/x-icon">
+  </head>
+  <body>
     <div class="container">
-        <h1>Cyberpunk Translator</h1>
-        <div class="translator">
-            <textarea class="from-text" id="inputText" placeholder="Enter text to translate..."></textarea>
-            <select id="languageSelectFrom">
-                <option value="en-GB" selected>English</option>
-                <option value="es-ES">Spanish</option>
-                <option value="fr-FR">French</option>
-                <option value="de-DE">German</option>
-                <option value="ru-RU">Russian</option>
-                <!-- Add more languages as needed -->
-            </select>
-            <button class="exchange">Swap</button>
-            <select id="languageSelectTo">
-                <option value="en-GB">English</option>
-                <option value="es-ES" selected>Spanish</option>
-                <option value="fr-FR">French</option>
-                <option value="de-DE">German</option>
-                <option value="ru-RU">Russian</option>
-                <!-- Add more languages as needed -->
-            </select>
-            <textarea class="to-text" id="outputText" placeholder="Translation..."></textarea>
-            <button id="translateBtn">Translate</button>
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
         </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button>Translate Text</button>
     </div>
-    <script src="script.js"></script>
-    <script src="countries.js"></script>
-</body>
+
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
 </html>
