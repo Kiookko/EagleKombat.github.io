@@ -1,15 +1,61 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    overflow: hidden;
-    background-color: black;
-    color: white;
 }
 
-#gameCanvas {
-    display: block;
-    margin: auto;
-    background: #1a1a1a;
-    border: 2px solid #00ffcc;
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
 }
 
+h1 {
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #0ff;
+}
 
+.translator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea, select, button {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #0ff;
+    color: #0ff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 0 10px #0ff;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    background-color: #0f0c29;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0ff;
+    color: #0f0c29;
+    transform: scale(1.05);
+}
