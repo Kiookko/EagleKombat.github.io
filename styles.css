@@ -60,3 +60,13 @@ button:hover {
     transform: scale(1.05);
 }
 
+.exchange {
+    align-self: center;
+    background-color: #302b63;
+}
+
+.exchange:hover {
+    background-color: #0ff;
+    color: #302b63;
+}
+
