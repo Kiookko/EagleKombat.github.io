@@ -1,0 +1,40 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to center, 
+                                #90ee90 0%,  /* Светло-темно-зеленый в левом углу */
+                                #add8e6 50%,  /* Светло-синий в правом углу */
+                                #dda0dd 100%); /* Светло-темно-фиолетовый в нижнем углу */
+}
+
+.container {
+    text-align: center;
+}
+
+#clicker {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#eagle {
+    width: 200px;
+    height: auto;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#customButton {
+    background-color: #add8e6;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
