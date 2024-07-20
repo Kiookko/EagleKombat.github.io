@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', (event) => {
-    const eagle = document.getElementById('eagle');
+    const clicksbutton = document.getElementById('clicksbutton');
     const clickCount = document.getElementById('clickCount');
     const resetButton = document.getElementById('resetButton');
     let count = 0;
