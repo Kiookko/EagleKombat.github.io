@@ -1,17 +1,15 @@
-// script.js
-document.addEventListener('DOMContentLoaded', (event) => {
-    const clickButton = document.getElementById('clickButton');
-    const clickCount = document.getElementById('clickCount');
-    const resetButton = document.getElementById('resetButton');
-    let count = 0;
+function translateText() {
+    const inputText = document.getElementById('inputText').value;
+    const language = document.getElementById('languageSelect').value;
+    const outputText = document.getElementById('outputText');
 
-    clickButton.addEventListener('click', () => {
-        count++;
-        clickCount.textContent = count;
-    });
+    // Simulated translation for demo purposes
+    const translations = {
+        es: 'Texto traducido al español.',
+        fr: 'Texte traduit en français.',
+        de: 'In deutschen übersetzter Text.',
+        ru: 'Переведенный текст на русский.'
+    };
 
-    resetButton.addEventListener('click', () => {
-        count = 0;
-        clickCount.textContent = count;
-    });
-});
+    outputText.value = translations[language] || 'Translation not available.';
+}
