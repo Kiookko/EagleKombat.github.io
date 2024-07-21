@@ -144,19 +144,23 @@ body {
   margin-top: 20px;
   font-size: 17px;
   border-radius: 5px;
-  background: #0ff;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .container button:hover {
-  background-color: #0f0c29;
-  color: #0ff;
+  background-color: #00ff00;
+  color: #0f0c29;
   transform: scale(1.05);
 }
 
 @media (max-width: 660px) {
+  body {
+    background: linear-gradient(135deg, #0a0a1a, #232355, #1b1b2b);
+  }
   .container {
     padding: 20px;
+    width: 90%;
   }
   .wrapper .text-input {
     flex-direction: column;
@@ -180,5 +184,19 @@ body {
   }
   .controls .exchange {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 661px) and (max-width: 1024px) {
+  .container {
+    padding: 25px;
+    width: 80%;
+  }
+  .text-input textarea {
+    height: 225px;
+  }
+  .container button {
+    padding: 13px;
+    font-size: 16px;
   }
 }
