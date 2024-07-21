@@ -144,13 +144,13 @@ body {
   margin-top: 20px;
   font-size: 17px;
   border-radius: 5px;
-  background: #0ff;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .container button:hover {
-  background-color: #ff00ff;
-  color: #0ff;
+  background-color: #00ff00;
+  color: #0f0c29;
   transform: scale(1.05);
 }
 
