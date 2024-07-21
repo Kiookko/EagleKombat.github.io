@@ -52,4 +52,8 @@ icons.forEach(icon => {
             navigator.clipboard.writeText(target.id === "from" ? fromText.value : toText.value);
         } else {
             let utterance = new SpeechSynthesisUtterance(target.id === "from" ? fromText.value : toText.value);
-            utterance.lang = target.id === "from" ? selectTags[0
+            utterance.lang = target.id === "from" ? selectTags[0].value : selectTags[1].value;
+            speechSynthesis.speak(utterance);
+        }
+    });
+});
