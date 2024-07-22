@@ -8,11 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>GeomTranslator</h1>
+        <h1 id="title">Самый совершенный переводчик будущего, точность 59%</h1>
+        <button id="translatePageBtn">Перевести страницу</button>
         <div class="wrapper">
             <div class="text-input">
-                <textarea class="from-text" placeholder="Enter text"></textarea>
-                <textarea class="to-text" placeholder="Translation" readonly></textarea>
+                <textarea class="from-text" placeholder="Введите текст"></textarea>
+                <textarea class="to-text" placeholder="Перевод" readonly></textarea>
             </div>
             <ul class="controls">
                 <li class="row from">
@@ -33,11 +34,12 @@
                     </div>
                 </li>
             </ul>
-            <button>Translate</button>
+            <button id="translateBtn">Перевести</button>
         </div>
     </div>
     <script src="countries.js"></script>
     <script src="script.js"></script>
     <script src="orientation.js"></script>
+    <script src="translatePage.js"></script>
 </body>
 </html>
