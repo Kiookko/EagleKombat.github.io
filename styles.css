@@ -34,6 +34,24 @@ h1 {
   font-size: 24px;
 }
 
+#translatePageBtn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  color: #0f0c29;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#translatePageBtn:hover {
+  background-color: #00ff00;
+  color: #0f0c29;
+  transform: scale(1.05);
+}
+
 .wrapper {
   border-radius: 5px;
   border: 1px solid #0ff;
@@ -189,21 +207,4 @@ h1 {
   .controls .row select {
     font-size: 16px;
   }
-  .controls .exchange {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 661px) and (max-width: 1024px) {
-  .container {
-    padding: 25px;
-    width: 80%;
-  }
-  .text-input textarea {
-    height: 225px;
-  }
-  .container button {
-    padding: 13px;
-    font-size: 16px;
-  }
-}
+  .controls
