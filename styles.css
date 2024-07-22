@@ -17,6 +17,16 @@ body {
   padding: 0 10px;
 }
 
+/body {
+  display: flex;
+  align-items: up;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #0ff;
+  padding: 0 10px;
+}
+
 .container {
   max-width: 690px;
   width: 100%;
