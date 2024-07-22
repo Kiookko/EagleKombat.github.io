@@ -1,42 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="wrapper">
-            <div class="text-input">
-                <textarea class="from-text" placeholder="Enter text"></textarea>
-                <textarea class="to-text" placeholder="Translation" readonly></textarea>
-            </div>
-            <ul class="controls">
-                <li class="row from">
-                    <select></select>
-                    <div class="icons">
-                        <i id="from" class="fa fa-copy"></i>
-                        <i id="from" class="fa fa-volume-up"></i>
-                    </div>
-                </li>
-                <li class="exchange">
-                    <i class="fa fa-exchange"></i>
-                </li>
-                <li class="row to">
-                    <select></select>
-                    <div class="icons">
-                        <i id="to" class="fa fa-copy"></i>
-                        <i id="to" class="fa fa-volume-up"></i>
-                    </div>
-                </li>
-            </ul>
-            <button>Translate</button>
-        </div>
-    </div>
-    <script src="countries.js"></script>
-    <script src="script.js"></script>
-    <script src="orientation.js"></script>
-</body>
-</html>
+document.addEventListener('DOMContentLoaded', () => {
+  function adjustLayout() {
+    const width = window.innerWidth;
+    const container = document.querySelector('.container');
+    
+    if (width <= 660) {
+      container.style.padding = '20px';
+      container.style.width = '90%';
+      document.body.style.background = 'linear-gradient(135deg, #0a0a1a, #232355, #1b1b2b)';
+    } else if (width > 660 && width <= 1024) {
+      container.style.padding = '25px';
+      container.style.width = '80%';
+    } else {
+      container.style.padding = '30px';
+      container.style.width = '100%';
+      document.body.style.background = 'linear-gradient(135deg, #0f0c29, #302b63, #24243e)';
+    }
+  }
+
+  window.addEventListener('resize', adjustLayout);
+  adjustLayout(); // Initial call to set up layout based on current width
+});
