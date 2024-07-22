@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     en: {
-      title: "The most advanced translator of the future, 59% accuracy",
+      title: "GeomTranslator",
       translatePageBtn: "Translate Page",
       fromTextPlaceholder: "Enter text",
       toTextPlaceholder: "Translation",
       translateBtn: "Translate"
     },
     ru: {
-      title: "Самый совершенный переводчик будущего, точность 59%",
+      title: "ГеомПереводчик",
       translatePageBtn: "Перевести страницу",
       fromTextPlaceholder: "Введите текст",
       toTextPlaceholder: "Перевод",
