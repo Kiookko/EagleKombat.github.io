@@ -35,6 +35,7 @@ h1 {
 }
 
 #translatePageBtn {
+  margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -205,6 +206,55 @@ h1 {
     font-size: 16px;
   }
   .controls .row select {
-    font-size: 16px;
-  }
-  .controls
+    font-size:Let's update your translator website with the specified changes. The updates will include adding the new button to translate the interface text and adjusting the position of the existing buttons. 
+
+### Updated `index.html`
+
+Modify your HTML to include the new button and adjust the button positions:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">ГеомПереводчик</h1>
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea class="from-text" placeholder="Введите текст"></textarea>
+                <textarea class="to-text" placeholder="Перевод" readonly></textarea>
+            </div>
+            <button id="translatePageBtn">Перевести страницу</button>
+            <ul class="controls">
+                <li class="row from">
+                    <select></select>
+                    <div class="icons">
+                        <i id="from" class="fa fa-copy"></i>
+                        <i id="from" class="fa fa-volume-up"></i>
+                    </div>
+                </li>
+                <li class="exchange">
+                    <i class="fa fa-exchange"></i>
+                </li>
+                <li class="row to">
+                    <select></select>
+                    <div class="icons">
+                        <i id="to" class="fa fa-copy"></i>
+                        <i id="to" class="fa fa-volume-up"></i>
+                    </div>
+                </li>
+            </ul>
+            <button id="translateBtn">Перевести</button>
+        </div>
+    </div>
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+    <script src="orientation.js"></script>
+    <script src="translatePage.js"></script>
+</body>
+</html>
