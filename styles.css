@@ -17,16 +17,6 @@ body {
   padding: 0 10px;
 }
 
-/body {
-  display: flex;
-  align-items: up;
-  justify-content: up;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #0ff;
-  padding: 0 10px;
-}
-
 .container {
   max-width: 690px;
   width: 100%;
@@ -35,6 +25,13 @@ body {
   border: 2px solid #0ff;
   border-radius: 10px;
   box-shadow: 0 0 15px #0ff;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ff00ff;
+  font-size: 24px;
 }
 
 .wrapper {
