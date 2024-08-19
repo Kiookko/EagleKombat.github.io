@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translator</title>
+    <title>GeomTranslator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,8 +36,20 @@
             <button>Translate</button>
         </div>
     </div>
+
+    <!-- User Agreement Modal -->
+    <div id="user-agreement-modal" class="modal">
+        <div class="modal-content">
+            <h2>User Agreement</h2>
+            <p>You need to accept the user agreement to continue using GeoTranslator.</p>
+            <p><a href="user-agreement.html">Read the User Agreement</a></p>
+            <button id="accept-agreement">Accept</button>
+        </div>
+    </div>
+
     <script src="countries.js"></script>
     <script src="script.js"></script>
     <script src="orientation.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
